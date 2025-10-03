@@ -89,24 +89,26 @@ nav {
 }
 
 .parallax-viewport {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: 1; /* debajo del texto del hero */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    /* debajo del texto del hero */
 }
 
 .parallax-layer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 110%; /* ligeramente más grande que la pantalla */
-  height: auto;
-  pointer-events: none;
-  will-change: transform;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    /* ligeramente más grande que la pantalla */
+    height: auto;
+    pointer-events: none;
+    will-change: transform;
 }
 
 .hero-content {
@@ -330,6 +332,39 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem 0;
+}
+
+/* Botones de idioma */
+.lang-switch {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.lang-switch .lang {
+    background: rgba(255, 255, 255, 0.3);
+    /* más visible */
+    border: 1px solid var(--text-color, #fff);
+    color: var(--text-color, #fff);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.lang-switch .lang:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--bg-color, #000);
+}
+
+/* Idioma activo */
+.lang-switch .lang.active {
+    background: var(--text-color, #fff);
+    /* sólido */
+    color: var(--bg-color, #000);
+    font-weight: bold;
 }
 
 
